@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Repositories\moduleRepository;
+use App\Repositories\ModuleRepository;
 use App\Repositories\LessonRepository;
 
 class LessonService 
