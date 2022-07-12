@@ -31,11 +31,11 @@ class CourseService
 
     public function deleteCourse(string $identify)
     {
-        $this->repository->deleteCourseByUuid($identify);
+        return $this->repository->deleteCourseByUuid($identify);
     }
 
     public function updateCourse(string $identify, array $data)
     {
-        $this->repository->updateCourseByUuid($identify, $data);
+        return $this->repository->updateCourseByUuid($identify, $data);
     }
 }
