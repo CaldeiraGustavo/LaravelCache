@@ -22,7 +22,7 @@ class ModuleService
     public function getModulesByCourse($course)
     {
         $course = $this->courseRepository->getCourseByUuid($course);
-        return $this->repository->getModuleCurse($course->id);
+        return $this->repository->getModuleCourse($course->id);
     }
 
     public function createNewModule(array $data)

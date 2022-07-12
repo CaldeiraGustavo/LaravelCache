@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CourseResource extends JsonResource
+class LessonResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,10 +17,10 @@ class CourseResource extends JsonResource
     {
         return [
             'identify' => $this->uuid,
-            'title' => $this->name,
+            'name' => $this->name,
             'description' => $this->description,
-            'date' => Carbon::make($this->created_at)->format('Y-m-d'),
-            'modules' => ModuleResource::collection($this->modules)
+            'video' => $this->video,
+            'date' => Carbon::make($this->created_at)->format('Y-m-d')
         ];
     }
 }

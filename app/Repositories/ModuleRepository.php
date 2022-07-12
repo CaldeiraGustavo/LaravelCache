@@ -46,7 +46,7 @@ class ModuleRepository
         return $module->update($data);
     }
 
-    public function getModuleCurse(string $courseId)
+    public function getModuleCourse(string $courseId)
     {
         return $this->entity->where('course_id', $courseId)->get();
     }
